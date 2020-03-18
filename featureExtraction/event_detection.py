@@ -259,8 +259,7 @@ def get_dictionary_entry_for_saccade(amplitude, fixation_radius_threshold, degre
 		elif d_degrees < 16:
 			sac_id = 'r'
 		else:
-			print
-			print 'error! d_degrees cannot be matched to a sac_id for a small saccade ', d_degrees
+			print ('error! d_degrees cannot be matched to a sac_id for a small saccade ', d_degrees)
 			sys.exit(1)
 
 	else:  # large
@@ -301,7 +300,7 @@ def get_dictionary_entry_for_saccade(amplitude, fixation_radius_threshold, degre
 		elif d_degrees < 33:
 			sac_id = 'R'
 		else:
-			print 'error! d_degrees cannot be matched to a sac_id for a large saccade: ', d_degrees
+			print ('error! d_degrees cannot be matched to a sac_id for a large saccade: ', d_degrees)
 			sys.exit(1)
 	return sac_id
 
