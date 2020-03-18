@@ -50,7 +50,7 @@ if __name__ == "__main__":
 		for t in threads:
 			t.join()
 
-		print 'finished all features for participant', p
+		print ('finished all features for participant', p)
 
 	# Merge the features from all participants into three files per window_size:
 	# merged_features includes all features
@@ -63,7 +63,7 @@ if __name__ == "__main__":
 	annotation = np.genfromtxt(conf.annotation_path, delimiter=',', skip_header=1)
 
 	for window_size in conf.all_window_sizes:
-		print 'merging window size', window_size
+		print ('merging window size', window_size)
 
 		windowfeats_subtask_all = []
 		windowfeats_subtask_ids = []
@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
 				windowfeats_subtask_ids.extend(ids_annotation.tolist())
 			else:
-				print 'did not find ', featfilename
+				print ('did not find ', featfilename)
 				sys.exit(1)
 
 		ids = np.array(windowfeats_subtask_ids)
